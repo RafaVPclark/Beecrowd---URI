@@ -1,0 +1,11 @@
+let input = require("fs").readFileSync("/dev/stdin", "utf8");
+let linhas = input.split("\n");
+let valores1 = linhas[0].split(" ");
+let valores2 = linhas[1].split(" ");
+let pecas1 = parseInt(valores1[1]);
+let valUnitario1 = parseFloat(valores1[2]);
+let valAtual = pecas1*valUnitario1;
+let pecas2 = parseInt(valores2[1]);
+let valUnitario2 = parseFloat(valores2[2]);
+valAtual = valAtual + (pecas2*valUnitario2);
+console.log(`VALOR A PAGAR : R$ ${valAtual.toFixed(2)}`);

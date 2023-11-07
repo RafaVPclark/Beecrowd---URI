@@ -1,0 +1,10 @@
+let input = require("fs").readFileSync("/dev/stdin" , "utf8");
+let linhas = input.split("\n");
+let entrada = linhas.shift();
+let ano = parseInt(entrada/365);
+let resto = entrada - (ano*365);
+let mes = parseInt(resto/30);
+resto = resto - (mes*30);
+console.log(ano + " ano(s)");
+console.log(mes + " mes(es)");
+console.log(resto + " dia(s)");
